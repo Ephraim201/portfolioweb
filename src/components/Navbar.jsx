@@ -37,7 +37,7 @@ const MenuItemWithIcon = ({ id, label, defaultIcon, hoverIcon, link, onClick }) 
 
 const Navbar = ({ onNavigate }) => {
   return (
-    <nav className="fixed top-0 w-full bg-white/70 backdrop-blur shadow z-50">
+    <nav className="fixed top-0 w-full bg-[#2C4055]/70 backdrop-blur shadow z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div

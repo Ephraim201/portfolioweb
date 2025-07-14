@@ -3,10 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -30,6 +28,7 @@ a:hover {
 }
 
 body {
+  font-family: 'Space Grotesk', sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -47,7 +46,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #E0CC67;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -61,7 +60,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #472121;
     background-color: #ffffff;
   }
   a:hover {
@@ -73,12 +72,51 @@ button:focus-visible {
 }
 
 :root {
-  /* este es para modo oscuro */
-  background-color: #f0f0f0; /* por ejemplo un gris claro */
+  background: #0A0A12; /* Azul negro profundo */
+  box-shadow: 0 0 15px rgba(255, 42, 109, 0.6);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #fefefe; /* para modo claro */
+    background-color: #141414; /* para modo claro */
   }
+}
+
+/* Efecto de parpadeo neón */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    box-shadow: 
+      0 0 10px rgba(255, 50, 50, 0.8),
+      0 0 20px rgba(255, 0, 0, 0.6);
+  }
+  20%, 24%, 55% {
+    box-shadow: 
+      0 0 5px rgba(255, 50, 50, 0.5),
+      0 0 10px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.neon-hover-effect:hover {
+  animation: neon-flicker 1.5s infinite;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,42,109,0.1) 0%, transparent 70%);
+  z-index: 0;
 }

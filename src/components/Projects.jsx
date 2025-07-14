@@ -1,11 +1,9 @@
 import { useState } from "react";
-import imagen1 from "/images/logo.png";
 
 const Projects = () => {
-  // Estado para controlar qué categoría está activa
-  const [activeCategory, setActiveCategory] = useState("unity"); // "unitye" o "web"
+  const [activeCategory, setActiveCategory] = useState("unity");
 
-  // Datos de proyectos de Unity
+  // Proyectos Unity - Manteniendo todos tus datos originales
   const unityProjects = [
     {
       id: 1,
@@ -41,11 +39,11 @@ const Projects = () => {
     }
   ];
 
-  // Datos de proyectos web con React (puedes reemplazar estos con tus proyectos reales)
+  // Proyectos Web - Manteniendo tus datos originales
   const webProjects = [
     {
       id: 1,
-      image: "gifs/inspirator.gif", // Reemplaza con tu imagen
+      image: "gifs/inspirator.gif",
       date: "Julio 2025",
       title: "Inspirator",
       description: "Una pagina web creada en react con fondo interectivo que te proporciona frases que la gente nunca a dicho",
@@ -53,16 +51,15 @@ const Projects = () => {
     },
     {
       id: 2,
-      image: "gifs/lifedrawing.gif", // Reemplaza con tu imagen
+      image: "gifs/lifedrawing.gif",
       date: "Marzo 2023",
       title: "Life Drawing",
-      description: "Aplicación web que muestra datos meteorológicos en tiempo real utilizando React y la API de OpenWeatherMap.",
+      description: "Aplicación web que te permite crear dibujos vibrantes con difernetes tipos de intensidad",
       link: "https://github.com/Ephraim201/lifedrawing"
     }
-    // Puedes agregar más proyectos web aquí
   ];
 
-  // Función para renderizar los proyectos según la categoría seleccionada
+  // Función de renderizado con efectos neón
   const renderProjects = () => {
     const projectsToRender = activeCategory === "unity" ? unityProjects : webProjects;
     
@@ -71,27 +68,41 @@ const Projects = () => {
         {projectsToRender.map(project => (
           <div 
             key={project.id}
-            className="rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-300 bg-white p-6 space-y-4 w-full"
+            className="relative rounded-2xl p-6 space-y-4 w-full 
+                        bg-gray-900 border-2 border-transparent
+                        hover:border-red-500 hover:shadow-[0_0_15px_rgba(255,50,50,0.7)]
+                        transition-all duration-300 group overflow-hidden neon-hover-effect"
           >
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="rounded-lg w-full object-cover h-48" 
-            />
-            <p className="text-sm text-gray-500">{project.date}</p>
-            <h3 className="text-2xl font-semibold text-black">{project.title}</h3>
-            <p className="text-gray-700 text-base leading-relaxed break-words line-clamp-4">
-              {project.description}
-            </p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline text-base"
-            >
-              👉 Ver más sobre este proyecto en GitHub
-            </a>
-            <hr className="border-t-2 border-gray-700 mt-4" />
+            {/* Efecto de luz neón interior */}
+            <div className="absolute inset-0 rounded-xl 
+                            opacity-0 group-hover:opacity-20
+                            bg-[radial-gradient(circle_at_center,_rgba(255,50,50,0.8),_transparent_70%)]
+                            transition-opacity duration-500 pointer-events-none" />
+
+            {/* Contenido del proyecto */}
+            <div className="relative z-10">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="rounded-lg w-full object-cover h-48 group-hover:brightness-110 transition-all" 
+              />
+              <p className="text-sm text-gray-400 group-hover:text-red-300">{project.date}</p>
+              <h3 className="text-2xl font-semibold text-white group-hover:text-red-400 transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-gray-300 group-hover:text-gray-100">
+                {project.description}
+              </p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-400 hover:text-red-300 hover:underline text-base inline-block mt-2"
+              >
+                👉 Ver en GitHub
+              </a>
+              <hr className="border-t-2 border-gray-700 mt-4 group-hover:border-red-400" />
+            </div>
           </div>
         ))}
       </div>
@@ -100,25 +111,29 @@ const Projects = () => {
 
   return (
     <section id="work" className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold mb-6 text-black">Proyectos 🔥</h2>
+      {/* Título con efecto neón */}
+      <h2 className="text-3xl font-bold mb-6 text-white bg-gray-900 inline-block px-4 py-2 rounded-lg 
+                     hover:text-red-400 hover:shadow-[0_0_10px_rgba(255,0,0,0.5)] transition-all">
+        Proyectos <span className="neon-text"></span>
+      </h2>
       
-      {/* Pestañas de categorías */}
-      <div className="flex justify-center mb-8">
+      {/* Pestañas de categorías con efectos */}
+      <div className="flex justify-start mb-8"> 
         <button
-          className={`px-8 py-3 font-medium text-lg rounded-l-lg transition-colors duration-200 mr-2 ${
+          className={`px-8 py-3 font-medium text-lg rounded-l-lg transition-all duration-300 mr-2 ${
             activeCategory === "unity" 
-              ? "bg-black text-white" 
-              : "bg-gray-700 text-white hover:hover:bg-gray-600"
+              ? "bg-red-600 text-white shadow-[0_0_15px_rgba(255,0,0,0.8)]" 
+              : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:shadow-[0_0_5px_rgba(255,255,255,0.3)]"
           }`}
           onClick={() => setActiveCategory("unity")}
         >
           Proyectos Unity
         </button>
         <button
-          className={`px-8 py-3 font-medium text-lg rounded-r-lg transition-colors duration-200 ${
+          className={`px-8 py-3 font-medium text-lg rounded-r-lg transition-all duration-300 ${
             activeCategory === "web" 
-              ? "bg-black text-white" 
-              : "bg-gray-700 text-white hover:hover:bg-gray-600"
+              ? "bg-blue-500 text-white shadow-[0_0_15px_rgba(0,150,255,0.8)]" 
+              : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:shadow-[0_0_5px_rgba(255,255,255,0.3)]"
           }`}
           onClick={() => setActiveCategory("web")}
         >
@@ -126,7 +141,7 @@ const Projects = () => {
         </button>
       </div>
       
-      {/* Renderizar los proyectos según la categoría seleccionada */}
+      {/* Renderizado de proyectos */}
       {renderProjects()}
     </section>
   );

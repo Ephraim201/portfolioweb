@@ -23,7 +23,7 @@ const Hero = () => {
       className="max-w-6xl mx-auto px-6 pt-20 pb-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-10"
     >
       <div className="flex-1 text-center md:text-left">
-        <h1 className="text-4xl font-bold text-gray-800">William Peña</h1>
+        <h1 className="text-4xl font-bold text-white-800">William Peña</h1>
         <TypeAnimation
           sequence={[
             'Programador Web Creativo', 2000,
@@ -37,14 +37,14 @@ const Hero = () => {
           ]}
           wrapper="p"
           speed={50}
-          className="text-xl text-gray-600 mt-2"
+          className="text-xl text-white-600 mt-2"
           repeat={Infinity}
         />
 
-        <p className="mt-4 text-gray-700">
-          Actualmente estoy enfocado en desarrollar <span className="text-blue-600 font-medium">sitios web</span><br /> para pequeñas empresas y emprendedores, buscando crear experiencias digitales accesibles que reflejen su identidad y conecten con su audiencia
+        <p className="mt-4 text-white-700">
+          Actualmente estoy enfocado en desarrollar <span className="text-red-600 font-medium">sitios web</span><br /> para pequeñas empresas y emprendedores, buscando crear experiencias digitales accesibles que reflejen su identidad y conecten con su audiencia
         </p>
-        <p className="mt-4 text-gray-700">
+        <p className="mt-4 text-white-700">
           Amo resolver problemas y diseñar soluciones que generen impacto 💡<br />
           <span className="text-blue-600 font-semibold">Sobre mí yo📖 👉</span>
         </p>
