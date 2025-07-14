@@ -9,7 +9,7 @@ const Projects = () => {
   const unityProjects = [
     {
       id: 1,
-      image: "myweb/gifs/arkanod.gif",
+      image: "gifs/arkanod.gif",
       date: "Noviembre 2021",
       title: "Arkanoid-Unity",
       description: "Otro de mis juegos creados mientras estaba en el Grado Superior, Arkanoid un juego centrado en controlar una pequeña plataforma (llamada \"Vaus\") para hacer rebotar la pelota y destruir plataformas, destruyes todas y pasas al siguiente nivel.",
@@ -17,7 +17,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      image: "myweb/gifs/bullet2.gif",
+      image: "gifs/bullet2.gif",
       date: "Diciembre 2021",
       title: "Bullet Hell Yeah",
       description: "Este proyecto esta hecho en Unity y esta basado en los juegos Bullet-Hell, pero le e dado mi toque con asets de otros juegos.",
@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      image: "myweb/gifs/flappyball.gif",
+      image: "gifs/flappyball.gif",
       date: "Marzo 2022",
       title: "Flappy Ball",
       description: "Proyecto hecho en Unity. Inspirado en el clasico juego de FlappyBird, salvo que en esta ocacion controlas un cuadrado saltante",
@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      image: "myweb/gifs/fod1.gif",
+      image: "gifs/fod1.gif",
       date: "Octubre 2022",
       title: "Figth Or Die",
       description: "Este proyecto esta hecho en Unity, es un nuevo giro a la formula original de piedra/papel/tijeras con elementos de RPG simples",
@@ -45,7 +45,7 @@ const Projects = () => {
   const webProjects = [
     {
       id: 1,
-      image: "myweb/gifs/inspirator.gif", // Reemplaza con tu imagen
+      image: "gifs/inspirator.gif", // Reemplaza con tu imagen
       date: "Julio 2025",
       title: "Inspirator",
       description: "Una pagina web creada en react con fondo interectivo que te proporciona frases que la gente nunca a dicho",
@@ -53,7 +53,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      image: "myweb/gifs/lifedrawing.gif", // Reemplaza con tu imagen
+      image: "gifs/lifedrawing.gif", // Reemplaza con tu imagen
       date: "Marzo 2023",
       title: "Life Drawing",
       description: "Aplicación web que muestra datos meteorológicos en tiempo real utilizando React y la API de OpenWeatherMap.",
