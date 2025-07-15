@@ -120,3 +120,39 @@ button:focus-visible {
   background: radial-gradient(circle, rgba(255,42,109,0.1) 0%, transparent 70%);
   z-index: 0;
 }
+
+/* Efecto de giro */
+.flip-container {
+  perspective: 1000px;
+  width: 256px;
+  height: 320px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Efecto hover */
+.flip-container:hover .flipper:not(.flipped) {
+  transform: rotateY(15deg);
+}
