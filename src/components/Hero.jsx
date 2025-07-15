@@ -35,15 +35,15 @@ const Hero = () => {
           ]}
           wrapper="p"
           speed={50}
-          className="text-xl text-gray-300 mt-2"
+          className="text-xl text-[#67E099] mt-2"
           repeat={Infinity}
         />
         <p className="mt-4 text-gray-300">
           Actualmente estoy enfocado en desarrollar <span className="text-[#FF2A6D] font-medium">sitios web</span><br /> para pequeñas empresas y emprendedores.
         </p>
         <p className="mt-4 text-gray-300">
-          Amo resolver problemas y diseñar soluciones que generen impacto 💡<br />
-          <span className="text-[#FF2A6D] font-semibold">Sobre mí yo📖 👉</span>
+          Amo resolver problemas y diseñar soluciones que generen impacto<br />
+          <span className="text-[#FF2A6D] font-semibold">Sobre mí yo📖 👇</span>
         </p>
         
         <button

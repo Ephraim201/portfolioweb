@@ -132,7 +132,7 @@ const Projects = () => {
         <button
           className={`px-8 py-3 font-medium text-lg rounded-r-lg transition-all duration-300 ${
             activeCategory === "web" 
-              ? "bg-blue-500 text-white shadow-[0_0_15px_rgba(0,150,255,0.8)]" 
+              ? "bg-[#67E099] text-white shadow-[0_0_15px_rgba(0,150,255,0.8)]" 
               : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:shadow-[0_0_5px_rgba(255,255,255,0.3)]"
           }`}
           onClick={() => setActiveCategory("web")}
