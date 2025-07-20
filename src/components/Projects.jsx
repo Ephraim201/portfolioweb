@@ -42,20 +42,28 @@ const Projects = () => {
   // Proyectos Web - Manteniendo tus datos originales
   const webProjects = [
     {
-      id: 1,
+      id: 2,
       image: "gifs/inspirator.gif",
-      date: "Julio 2025",
+      date: "Junio 2025",
       title: "Inspirator",
       description: "Una pagina web creada en react con fondo interectivo que te proporciona frases que la gente nunca a dicho",
       link: "https://github.com/Ephraim201/inspirator"
     },
     {
-      id: 2,
+      id: 1,
       image: "gifs/lifedrawing.gif",
       date: "Marzo 2023",
       title: "Life Drawing",
       description: "Aplicación web que te permite crear dibujos vibrantes con difernetes tipos de intensidad",
       link: "https://github.com/Ephraim201/lifedrawing"
+    },
+    {
+      id: 3,
+      image: "gifs/hell.gif",
+      date: "Julio 2025",
+      title: "My Helldiver 🫡",
+      description: "Pagina web hecha en React para probar la importacion de modelos 3d y sus animaciones",
+      link: "https://github.com/Ephraim201/3dModelReact"
     }
   ];
 
